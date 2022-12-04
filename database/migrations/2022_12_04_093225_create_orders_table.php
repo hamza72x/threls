@@ -14,6 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
+        // skipping the address parts
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');

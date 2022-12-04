@@ -56,7 +56,7 @@ class OrderController extends Controller
 
         DB::commit();
 
-        return redirect()->route('orders.show', $order->id)->with('success', 'Order placed successfully');
+        return redirect()->route('orders.show', $order->id)->with('status', 'Order placed successfully');
     }
 
     public function show(Request $request, int $order_id)
