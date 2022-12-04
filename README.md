@@ -21,7 +21,7 @@ Note: tests are not configured to run with `QUEUE_CONNECTION=database` yet
 -   Buyer registers and logs in
 
     -   Buyer can import product by uploading csv file
-    -   Buyer can see all products after importing
+    -   Buyer can see his products after importing is done
 
 -   Seller registers and logs in
     -   Seller can see all products by all buyers
