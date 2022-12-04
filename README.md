@@ -26,3 +26,5 @@ Note: tests are not configured to run with `QUEUE_CONNECTION=database` yet
 -   Seller registers and logs in
     -   Seller can see all products by all buyers
     -   Seller can add and remove product to/from his cart
+    -   Seller can place order for his cart
+    -   Seller can see his orders

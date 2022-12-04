@@ -24,11 +24,11 @@ class CartController extends Controller
 
         $cart = $request->user()->mainCart();
 
-        if ($cartItem = $cart->cartItems()->where('product_id', $product_id)->first()) {
+        if ($cartItem = $cart->items()->where('product_id', $product_id)->first()) {
             $cartItem->quantity++;
             $cartItem->save();
         } else {
-            $cart->cartItems()->create([
+            $cart->items()->create([
                 'product_id' => $product_id,
                 'quantity' => 1,
             ]);
@@ -41,7 +41,7 @@ class CartController extends Controller
     {
         $cart = $request->user()->mainCart();
 
-        $cartItem = $cart->cartItems()->where('product_id', $product_id)->first();
+        $cartItem = $cart->items()->where('product_id', $product_id)->first();
 
         if (!$cartItem) {
             return abort(Response::HTTP_NOT_FOUND, 'Product not found');

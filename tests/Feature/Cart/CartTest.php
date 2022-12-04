@@ -71,7 +71,7 @@ class CartTest extends TestCase
             ->assertSessionHas('status', 'Product added to cart');
 
         // check quantity
-        $this->assertEquals(2, $buyer->mainCart()->cartItems()->first()->quantity);
+        $this->assertEquals(2, $buyer->mainCart()->items()->first()->quantity);
     }
 
     private function upload_products()

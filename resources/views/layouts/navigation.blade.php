@@ -14,7 +14,12 @@
                     </div>
                     <div class="space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link :href="route('cart.index')" :active="request()->routeIs('cart.index')">
-                            {{ __('Cart') }} ({{ $user->mainCart()->cartItems->count() }})
+                            {{ __('Cart') }} ({{ $user->mainCart()->items->count() }})
+                        </x-nav-link>
+                    </div>
+                    <div class="space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.index')">
+                            {{ __('Orders') }} ({{ $user->orders()->count() }})
                         </x-nav-link>
                     </div>
                 @endif

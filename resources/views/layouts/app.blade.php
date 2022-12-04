@@ -31,7 +31,7 @@
         @if (session('error'))
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
                 <div class="max-w-7xl text-red-600 p-4 rounded relative" role="alert">
-                    <strong class="font-bold">Success!</strong>
+                    <strong class="font-bold">Error: </strong>
                     <span class="block sm:inline">{{ session('error') }}</span>
                 </div>
             </div>
