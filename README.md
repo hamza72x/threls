@@ -1,8 +1,10 @@
 ### Running
 
+-   Copy `.env` from `.env.example` [don't need to change any db config if you run db with `make dev_db`]
+-   `composer install`
+-   `npm run build`
 -   Run docker
 -   Run mysql docker container: `make dev_db`
--   Copy `.env` from `.env.example` [don't need to change any db config if you ran db with `make dev_db`]
 -   Migrate database: `make migrate`
 -   Run server `make dev`
 -   Open `localhost:8000` in browser
